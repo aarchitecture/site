@@ -1,10 +1,47 @@
+@font-face {
+  font-family: "Helvetica Now";
+  src: url("/font.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 50 1000;
+  font-stretch: 50% 100%;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anonymous Pro";
+  src: url("/anonymouspro400-ascii.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+0000-007F;
+}
+
+@font-face {
+  font-family: "Anonymous Pro";
+  src: url("/anonymouspro400ital-ascii.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+0000-007F;
+}
+
 body {
-  margin: 40px auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 10px;
+  font-family: "Helvetica Now", "Helvetica", sans-serif;
+  font-optical-sizing: auto;
+}
+
+main {
   max-width: 720px;
   line-height: 1.6;
   font-size: 18px;
   color: #333;
-  padding: 0 10px;
 }
 
 h1,
@@ -15,7 +52,7 @@ h2 {
 
 pre,
 code {
-  font-family: monospace;
+  font-family: "Anonymous Pro", monospace;
 }
 
 pre {
