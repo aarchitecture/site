@@ -1,0 +1,28 @@
+body {
+  margin: 40px auto;
+  max-width: 720px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #333;
+  padding: 0 10px;
+}
+
+h1,
+h2 {
+  color: #111;
+  line-height: 1.2;
+}
+
+pre,
+code {
+  font-family: monospace;
+}
+
+pre {
+  padding: 10px;
+  background: #eee;
+}
+
+a {
+  color: #06c;
+}
