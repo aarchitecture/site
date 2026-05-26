@@ -11,8 +11,8 @@ quick note: examples will use loose random pseudocode lua-like syntax for readab
 in math, a function maps a domain to a codomain. every element of the domain maps to exactly one element of the codomain, meaning any passed input has only one output. the function f(x) = x^2 for example maps 2 -> 4, 3 -> 9, and also -3 -> 9
 
 in programming, a function can be made to resemble this idea. when a programming function is pure, it satisfies two conditions:
-1. deterministic output
-2. no side effects
+- deterministic output
+- no side effects
 
 ### deterministic output
 
