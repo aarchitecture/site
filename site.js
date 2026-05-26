@@ -216,14 +216,15 @@
     );
 
     return encoded
-      .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_, label, url) => {
-        return '<a href="' + escapeAttribute(url) + '">' + label + "</a>";
-      })
-      .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
-      .replace(/\*([^*]+)\*/g, "<em>$1</em>")
-      .replace(new RegExp(marker + "(\\d+)\u0000", "g"), (_, index) => {
-        return "<code>" + escapeHtml(codeSpans[Number(index)]) + "</code>";
-      });
+    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_, label, url) => {
+      return '<a href="' + escapeAttribute(url) + '">' + label + "</a>";
+    })
+    .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+    .replace(/(^|[\s(])\*([^*\n]+)\*(?=[\s).,!?:;]|$)/g, "$1<em>$2</em>")
+    .replace(/(^|[\s(])_([^_\n]+)_(?=[\s).,!?:;]|$)/g, "$1<em>$2</em>")
+    .replace(new RegExp(marker + "(\\d+)\u0000", "g"), (_, index) => {
+      return "<code>" + escapeHtml(codeSpans[Number(index)]) + "</code>";
+    });
   }
 
   function escapeHtml(text) {
