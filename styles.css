@@ -56,22 +56,23 @@ main {
 
 .page-track {
   display: flex;
-  width: 300%;
+  width: calc(100% * 3);
   transform: translateX(0);
   transition: transform 420ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-shell.is-blog-open .page-track {
-  transform: translateX(-33.3333%);
+  transform: translateX(calc(-100% / 3));
 }
 
 .site-shell.is-post-open .page-track {
-  transform: translateX(-66.6667%);
+  transform: translateX(calc(-200% / 3));
 }
 
 .page {
   box-sizing: border-box;
-  flex: 0 0 33.3333%;
+  flex: 0 0 calc(100% / 3);
+  min-width: 0;
   padding: 40px;
 }
 
