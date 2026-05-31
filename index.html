@@ -1,52 +1,58 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="my personal site!">
-    <title>aarchitecture's site</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="site.js" defer></script>
-  </head>
-  <body>
-    <main class="site-shell" id="site-shell">
-      <div class="page-track">
-        <section class="page home-page" id="home-page" aria-label="home">
-          <h1>aarchitecture's site</h1>
-          <p>hi. i'm aarchitecture. i do a lot of things on the interwebs. some of them are:</p>
-          <ul>
-            <li>music composition</li>
-            <li>programming</li>
-            <li>game development</li>
-            <li>drawing stuff</li>
-          </ul>
 
-          <h2>some stuff</h2>
-          <p>some of the things i've made are:</p>
-          <ul>
-            <li><a href="https://brighttpd.0x55.me">brighttpd</a> &mdash; a silly http server (that beats nginx)</li>
-            <li><a href="https://github.com/aarchitecture/cc60">cc60.p64</a> &mdash; a pixel-perfect port of celeste classic to the picotron at 60fps</li>
-            <li><a href="#blog" data-open-blog>my blog</a></li>
-            <li>more coming soon&hellip;</li>
-          </ul>
-        </section>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="my personal site!">
+  <title>aarchitecture's site</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
 
-        <section class="page blog-page" id="blog-page" aria-label="my blog" aria-hidden="true">
-          <p><a href="#home" data-close-blog>back home</a></p>
-          <h1>my blog</h1>
-          <p>some things i've written:</p>
-          <ul>
-            <li><a href="blog/math-and-programming.md" data-open-post>math and programming</a></li>
-            <li><a href="blog/algebraic-effects.md" data-open-post>algebraic effects</a></li>
-            <li><a href="blog/low-level-programming.md" data-open-post>low-level programming is a failure</a></li>
-          </ul>
-        </section>
+<body>
+  <main class="site-shell" id="site-shell">
+    <div class="page-track">
+      <section class="page home-page" id="home-page" aria-label="home">
+        <h1>aarchitecture's site</h1>
+        <p>hi. i'm aarchitecture. i do a lot of things on the interwebs. some of them are:</p>
+        <ul>
+          <li>music composition</li>
+          <li>programming</li>
+          <li>game development</li>
+          <li>drawing stuff</li>
+        </ul>
 
-        <section class="page post-page" id="post-page" aria-label="blog post" aria-hidden="true">
-          <p><a href="#blog" data-close-post>back to blog</a></p>
-          <article class="post-reader" id="post-reader" aria-live="polite"></article>
-        </section>
-      </div>
-    </main>
-  </body>
+        <h2>some stuff</h2>
+        <p>some of the things i've made are:</p>
+        <ul>
+          <li><a href="https://brighttpd.0x55.me">brighttpd</a> &mdash; a silly http server (that beats nginx)</li>
+          <li><a href="https://github.com/aarchitecture/cc60">cc60.p64</a> &mdash; a pixel-perfect port of celeste
+            classic to the picotron at 60fps</li>
+          <li><a href="#blog" data-open-blog>my blog</a></li>
+          <li>more coming soon&hellip;</li>
+        </ul>
+      </section>
+
+      <section class="page blog-page" id="blog-page" aria-label="my blog" aria-hidden="true">
+        <p><a href="#home" data-close-blog>back home</a></p>
+        <h1>my blog</h1>
+        <p>some things i've written:</p>
+        <ul>
+          <li><a href="blog/math-and-programming.md" data-open-post>math and programming</a></li>
+          <li><a href="blog/algebraic-effects.md" data-open-post>algebraic effects</a></li>
+          <li><a href="blog/low-level-programming.md" data-open-post>low-level programming is a failure</a></li>
+          <li><a href="blog/memory-management-sucks-actually.md" data-open-post>memory management sucks, actually</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="page post-page" id="post-page" aria-label="blog post" aria-hidden="true">
+        <p><a href="#blog" data-close-post>back to blog</a></p>
+        <article class="post-reader" id="post-reader" aria-live="polite"></article>
+      </section>
+    </div>
+  </main>
+</body>
+
 </html>

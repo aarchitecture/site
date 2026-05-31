@@ -1,6 +1,6 @@
 # algebraic effects
 
-in my [last post](#post=blog%2Fmath-and-programming.md) i talked about purity and totality and why turning programming into math unlocks things like fearless refactoring, safe parallelism, and aggressive compiler optimizations. there is a catch: real programs have to do things. they read files, throw errors, keep state, log messages, and talk to the network. a completely pure, total program cannot even produce output without someone noticing.
+in my [last post](#post=blog%2Fmath-and-programming.md) i talked about purity and totality and why turning programming into math unlocks things like fearless refactoring, safe parallelism, and aggressive compiler optimisations. there is a catch: real programs have to do things. they read files, throw errors, keep state, log messages, and talk to the network. a completely pure, total program cannot even produce output without someone noticing.
 
 this post describes a way to have your program do those things without giving up the mathematical guarantees. the idea is algebraic effects. they let you describe effectful computations without actually performing them, so your code stays pure and the actual side effects are pushed to swappable, composable handlers. think of it as treating side effects as first-class descriptions instead of invisible actions.
 
@@ -179,10 +179,10 @@ just like purity, algebraic effects give the compiler a lot of information. beca
 
 - eliminate redundant effect operations. if two `Log.log` calls in a pure context have the same message, the compiler can merge them, because the description is a pure value.
 - fuse handlers. if you are handling an effect only to re-perform it in an outer handler, the compiler can short-circuit that intermediate layer.
-- parallelize independent effect sets. if two expressions have disjoint effect sets, they cannot interfere, so they can run in parallel without any synchronization.
+- parallelise independent effect sets. if two expressions have disjoint effect sets, they cannot interfere, so they can run in parallel without any synchronisation.
 - statically guarantee resource bounds. if an effect handler for concurrency uses a bounded number of fibers, and the effect signatures do not allow unbounded recursion on their own, the compiler can verify that the whole program will not diverge.
 
-languages like Koka and OCaml 5 (with its effect handlers) compile effect operations down to efficient continuation passing, and the type system allows powerful inlining and specialization.
+languages like Koka and OCaml 5 (with its effect handlers) compile effect operations down to efficient continuation passing, and the type system allows powerful inlining and specialisation.
 
 ## a quick connection to algebraic data types
 

@@ -55,7 +55,7 @@ you might wonder why network communication or writing to files counts here. the 
 
 ### what's the point
 
-basically, a pure function's result depends on _just_ its inputs. this property is called _referential transparency_; any call to the function can be replaced with its result without actually affecting the program's meaning. the function can be understood in isolation, tested without mocking, and optimized aggressively by the compiler. i can replace `add(2, 3)` with `5` throughout and my output will never change.
+basically, a pure function's result depends on _just_ its inputs. this property is called _referential transparency_; any call to the function can be replaced with its result without actually affecting the program's meaning. the function can be understood in isolation, tested without mocking, and optimised aggressively by the compiler. i can replace `add(2, 3)` with `5` throughout and my output will never change.
 
 ## totality
 
@@ -160,7 +160,7 @@ in some languages, especially proof assistants and dependently typed languages, 
 
 ## why are we turning programming into math?
 
-the thing is, purity and totality are not just theoretical niceties; they give the compiler knowledge that enables specific, concrete optimizations. because pure functions are referentially transparent, the compiler can replace any call with its result, inline functions, and eliminate redundant computations without changing program behavior. this simplifies both manual refactoring and automatic optimization.
+the thing is, purity and totality are not just theoretical niceties; they give the compiler knowledge that enables specific, concrete optimisations. because pure functions are referentially transparent, the compiler can replace any call with its result, inline functions, and eliminate redundant computations without changing program behavior. this simplifies both manual refactoring and automatic optimisation.
 
 moreover, pure functions have no shared mutable state. two independent pure computations can execute in parallel with zero risk of data races. the compiler or runtime can automatically split a map over a large array across multiple cores without any threading primitives in the source code. the result is deterministic regardless of scheduling.
 
@@ -168,7 +168,7 @@ another thing is that a tracing JIT compiler can profile hot code paths and spec
 
 total functions can also just not loop infinitely. this is a hard requirement in some domains (embedded systems, safety-critical software) where resource bounds must be statically known.
 
-these benefits are not a matter of compiler cleverness alone; they are direct consequences of the definitions. when mutation and partiality are the default, the compiler must conservatively assume that any function call could have side effects or could fail, which limits the optimizations that can be applied.
+these benefits are not a matter of compiler cleverness alone; they are direct consequences of the definitions. when mutation and partiality are the default, the compiler must conservatively assume that any function call could have side effects or could fail, which limits the optimisations that can be applied.
 
 ## closing note
 
